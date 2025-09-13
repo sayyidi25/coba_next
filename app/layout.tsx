@@ -1,7 +1,7 @@
 // app/layout.tsx
 import "./globals.css";
-import CartProvider from "../../components/CartProvider";
-import CartDrawer from "../../components/CartDrawer";
+import CartProvider from "../components/CartProvider";
+import CartDrawer from "../components/CartDrawer";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="id">
-  <body className={`${inter.className} bg-gradient-to-br from-blue-50 via-white to-blue-100 min-h-screen text-gray-800`}>
+      <body className={inter.className}>
         <CartProvider>
           <header className="bg-blue-700 text-white">
             <div className="container flex items-center justify-between p-4">
